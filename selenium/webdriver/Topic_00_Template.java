@@ -13,6 +13,12 @@ import java.time.Duration;
 public class Topic_00_Template {
     WebDriver driver;
 
+    @BeforeClass
+    public void beforeClass(){
+        driver =new FirefoxDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+    }
+
 
     @Test
     public void TC_01_() {
